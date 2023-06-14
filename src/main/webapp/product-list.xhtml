@@ -1,0 +1,30 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+
+</h:head>
+  <h:body> 
+        <h:form id="form">
+                <h:dataTable id="table" var="product" value="#{productList.products}">
+                    <h:column>
+                        <f:facet name="header"># Id</f:facet>
+                        <h:outputText value="#{product.id}" />
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Name</f:facet>
+                        <h:outputText value="#{product.name}" />
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Price</f:facet>
+                        <h:outputText value="#{product.price}">
+                            <f:convertNumber type="currency" currencySymbol="$ " />
+                        </h:outputText>
+                    </h:column>
+                </h:dataTable>
+        </h:form>
+   </h:body> 
+
+</html>

@@ -1,0 +1,43 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+<h:head></h:head>
+
+<h:body style="background-color:yellow">
+
+        <h:form>
+
+                <h1>Please enter your details</h1>
+
+                <h:panelGrid columns="2">
+                
+                <h:outputText value="Enter Book Number"/>
+               <!--  <h:outputText value="#{request.getParameter('bookid')}" /> -->
+
+                <h:inputText id="bookid" value="#{addBook.bookid}"/>
+                
+
+                <h:outputText value="Enter Book Name"/>
+
+                <h:inputText id="bookname" value="#{addBook.bookname}"/>
+
+               
+
+                <h:outputText value="Enter Book Author"/>
+
+                <h:inputText id ="author" value="#{addBook.author}"/>
+
+               
+ 				<h:outputText value="Enter Book Price"/>
+
+                <h:inputText id ="price" value="#{addBook.price}"/>
+
+                <h:commandButton value="Login" action ="#{addBook.submit}"/>
+
+                </h:panelGrid>
+
+        </h:form>
+
+</h:body>
+
+</html>
